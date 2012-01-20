@@ -27,7 +27,7 @@ describe('Bot', function() {
     });
   });
   
-  describe('.db()', function() {
+  describe('.answer()', function() {
     it('should answer simple questions', function(done) {
       var bot = new Bot;
       bot.answer('Hello!', function(answer) {
