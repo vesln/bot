@@ -33,7 +33,7 @@ describe('Bot', function() {
       bot.answer('Hello!', function(answer) {
         answer.should.match(/(Hi.|Hello.|Greetings.|How can I help you today?)/);
         done();
-      })
+      });
     });
   });
 });
