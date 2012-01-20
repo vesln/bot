@@ -36,10 +36,4 @@ describe('Bot', function() {
       });
     });
   });
-  
-  describe('.words()', function() {
-    it('should remove pointless words for the unnecessary words', function() {
-      
-    });
-  });
 });
