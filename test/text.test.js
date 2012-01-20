@@ -47,4 +47,11 @@ describe('Text', function() {
       });
     });
   });
+  
+  describe('.words()', function() {
+    it('should remove stop words', function() {
+      var text = new Text('I love her. Am I an idiot?');
+      text.words().should.eql(['i', 'love', 'i', 'idiot']);
+    });
+  });
 });
