@@ -1,7 +1,7 @@
 {
     "name": "bot"
   , "preferGlobal": "true"
-  , "version": "0.0.1.alpha"
+  , "version": "0.0.1"
   , "description": "Feeling lonely? You personal bot is here."
   , "keywords": ["bot", "chat bot"]
   , "author": "Veselin Todorov <hi@vesln.com>"
