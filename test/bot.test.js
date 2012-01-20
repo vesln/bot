@@ -26,4 +26,14 @@ describe('Bot', function() {
       bot._db.should.eql({foo: 'bar'});
     });
   });
+  
+  describe('.db()', function() {
+    it('should answer simple questions', function(done) {
+      var bot = new Bot;
+      bot.answer('Hello!', function(answer) {
+        answer.should.match(/(Hi.|Hello.|Greetings.|How can I help you today?)/);
+        done();
+      })
+    });
+  });
 });
