@@ -19,4 +19,11 @@ describe('Bot', function() {
       bot.version.should.be.ok;
     });
   });
+  
+  describe('constructor', function() {
+    it('should load db', function() { 
+      var bot = new Bot({foo: 'bar'});
+      bot._db.should.eql({foo: 'bar'});
+    });
+  });
 });
