@@ -1,0 +1,31 @@
+{
+    "name": "bot"
+  , "preferGlobal": "true"
+  , "version": "0.0.1.alpha"
+  , "description": "Feeling lonely? You personal bot is here."
+  , "keywords": ["bot", "chat bot"]
+  , "author": "Veselin Todorov <hi@vesln.com>"
+  , "dependencies": {
+      "flatiron": "~0.1.7"
+  }
+  , "devDependencies": {
+      "mocha": "0.3.3"
+    , "should": "0.3.2"
+    , "sinon": "1.3.1"
+  }
+  , "repository" : {
+      "type" : "git"
+    , "url" : "http://github.com/vesln/bot.git"
+  }
+  , "homepage": "http://github.com/vesln/bot"
+  , "scripts": {
+      "test": "make test"
+  }
+  , "bin": {
+      "bot": "./bin/bot"
+  }
+  , "main": "./lib/index"
+  , "engines": { 
+      "node": ">= 0.6.0 < 0.7.0"
+  }
+}
