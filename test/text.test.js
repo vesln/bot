@@ -20,34 +20,6 @@ describe('Text', function() {
     });
   });
   
-  describe('.type()', function() {
-    describe('it should know if sentence is', function() {
-      it('imperative', function() {
-        var text = new Text('Hello.');
-        text.type().should.eql('imperative');
-        
-        text = new Text('Hello');
-        text.type().should.eql('imperative');
-      });
-      
-      it('interrogative', function() {
-        var text = new Text('Are you cool?');
-        text.type().should.eql('interrogative');
-        
-        text = new Text('I love her. Am I an idiot?');
-        text.type().should.eql('interrogative');
-      });
-      
-      it('exclamatory', function() {
-        var text = new Text('This... is... SPARTAAA!');
-        text.type().should.eql('exclamatory');
-        
-        text = new Text('I do not think so. I am sure!');
-        text.type().should.eql('exclamatory');
-      });
-    });
-  });
-  
   describe('.words()', function() {
     it('should remove stop words', function() {
       var text = new Text('I love her. Am I an idiot?');
