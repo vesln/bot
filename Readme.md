@@ -14,7 +14,7 @@ having a chat with the bot is pretty fun.
 ## Features
 
 - You can have fun when you are bored.
-- You can make better Twitter/Facebook statuses. :D
+- Now you can have better Twitter/Facebook statuses. :D
 
 ## Synopsis
 
