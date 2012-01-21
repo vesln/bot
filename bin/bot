@@ -1,0 +1,88 @@
+#!/usr/bin/env node
+
+/*!
+ * Bot - Feeling lonely? You personal bot is here.
+ * 
+ * Veselin Todorov <hi@vesln.com>
+ * MIT License.
+ */
+ 
+/**
+ * Module dependencies.
+ */
+var readline = require('readline');
+
+/**
+ * Bot class.
+ * 
+ * @type {Function}
+ */
+var Bot = require('../lib/bot');
+
+/**
+ * Database class.
+ * 
+ * @type {Function}
+ */
+var Db = require('../lib/db');
+
+/**
+ * Defaults.
+ * 
+ * @type {Object}
+ */
+var defaults = require('../db/defaults.json');
+
+/**
+ * Bot instance.
+ * 
+ * @type {Object}
+ */
+var bot = new Bot(new Db, defaults);
+
+/**
+ * Bot nickname.
+ * 
+ * @type {String}
+ */
+var nick = 'Bot: ';
+
+/**
+ * Your nickname.
+ * 
+ * @type {String}
+ */
+var you = 'You: ';
+
+/**
+ * Exit cmd.
+ * 
+ * @type {String}
+ */
+var exit = 'exit';
+
+/**
+ * Interface.
+ * 
+ * @type {Object}
+ */
+var rl = readline.createInterface(process.stdin, process.stdout)
+
+// When user type something.
+rl.on('line', function(line) {
+  if (line.trim() === 'exit') return rl.emit('close');
+  console.log(nick + bot.answer(line));
+  rl.setPrompt(you, you.length);
+  rl.prompt();
+});
+
+// On close.
+rl.on('close', function() {
+  console.log('\n' + nick +'Nice chat. Have a great day!');
+  process.exit(0);
+});
+
+// Greeting.
+console.log(nick + 'Good to see you here, dude. Let\'s talk.');
+rl.setPrompt(you, you.length);
+rl.prompt();
