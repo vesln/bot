@@ -11,6 +11,7 @@
  * Module dependencies.
  */
 var readline = require('readline');
+var colors = require('colors');
 
 /**
  * Bot class.
@@ -45,14 +46,14 @@ var bot = new Bot(new Db, defaults);
  * 
  * @type {String}
  */
-var nick = 'Bot: ';
+var nick = 'Bot: '.cyan;
 
 /**
  * Your nickname.
  * 
  * @type {String}
  */
-var you = 'You: ';
+var you = 'You: '.magenta;
 
 /**
  * Exit cmd.
@@ -72,7 +73,7 @@ var rl = readline.createInterface(process.stdin, process.stdout)
 rl.on('line', function(line) {
   if (line.trim() === 'exit') return rl.emit('close');
   console.log(nick + bot.answer(line));
-  rl.setPrompt(you, you.length);
+  rl.setPrompt(you, you.length  - 10);
   rl.prompt();
 });
 
@@ -84,5 +85,5 @@ rl.on('close', function() {
 
 // Greeting.
 console.log(nick + 'Good to see you here, dude. Let\'s talk.');
-rl.setPrompt(you, you.length);
+rl.setPrompt(you, you.length - 10);
 rl.prompt();
