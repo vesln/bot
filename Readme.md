@@ -2,7 +2,7 @@
 
 # Bot
 
-![screenshot](http://img535.imageshack.us/img535/4638/screenshot20120121at353.png)
+![screenshot](http://img850.imageshack.us/img850/79/screenshot20120121at637.png)
 
 ## Description
 	
