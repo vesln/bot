@@ -1,13 +1,18 @@
 /*!
  * Bot - Feeling lonely? You personal bot is here.
- * 
+ *
  * Veselin Todorov <hi@vesln.com>
  * MIT License.
  */
 
 /**
- * The tested class.
- * 
+ * Support.
+ */
+var should = require('chai').should();
+
+/**
+ * Subject.
+ *
  * @type {Function}
  */
 var Text = require('../lib/text');
@@ -19,7 +24,7 @@ describe('Text', function() {
       text._text.should.eql('Hello!');
     });
   });
-  
+
   describe('.words()', function() {
     it('should remove stop words', function() {
       var text = new Text('I love her. Am I an idiot?');
